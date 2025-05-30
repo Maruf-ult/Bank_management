@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url 
 from django.urls import reverse_lazy
 import environ
 env = environ.Env()
@@ -35,7 +36,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -95,14 +96,11 @@ WSGI_APPLICATION = 'bank_management.wsgi.application'
 
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env("DB_NAME"),
-        'USER': env("DB_USER"),
-        'PASSWORD': env("DB_PASSWORD"),
-        'HOST': env("DB_HOST"),
-        'PORT': env("DB_PORT"),
-    }
+    'default': dj_database_url.config(
+        # Replace this value with your local database's connection string.
+        default='postgresql://swis_bank_user:L2RSXt4qBRnfBjlLrDFgPerpTWPpzNoX@dpg-d0stb495pdvs7392jso0-a.singapore-postgres.render.com/swis_bank',
+        conn_max_age=600
+    )
 }
 
 
