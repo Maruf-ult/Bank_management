@@ -16,6 +16,7 @@ from django.urls import reverse_lazy
 import environ
 env = environ.Env()
 environ.Env.read_env()
+import os
 ...
 # Your secret key
 
@@ -157,9 +158,12 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 LOGOUT_REDIRECT_URL = reverse_lazy('home')  # Redirect to 'home' after logout
+
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
