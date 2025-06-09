@@ -3,33 +3,26 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Dummy Banking System" />
         <title>
             {% block head_title %}Banking System{% endblock %}
         </title>
-        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
 
         {% block head_extra %}{% endblock %}
-        <style>
-            footer {
-                position: fixed !important;
-                bottom: 0 !important;
-                width: 100%;
-            }
-        </style>
     </head>
-    <body class="bg-indigo-600">
+    <body class="bg-indigo-600 flex flex-col min-h-screen">
         {% include 'navbar.html' %}
-        {% block body %}
-            <div class="lg:container lg:mx-auto" id="main">
-                {% include 'messages.html' %}
-                {% block content %}
-                {% endblock %}
-            </div>
+
+        <div class="max-w-screen-lg mx-auto px-4 flex-grow" id="main">
+            {% include 'messages.html' %}
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <footer class="bg-gray-900 text-white text-center py-4 sticky bottom-0 w-full">
             {% include 'footer.html' %}
-
-        {% endblock %}
+        </footer>
     </body>
-
 </html>

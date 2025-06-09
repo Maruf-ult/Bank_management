@@ -1,9 +1,12 @@
-<h3>Hello {{user.first_name}} {{user.last_name}}</h3>
+<div class="bg-white p-6 rounded-lg shadow-md text-center">
+    <h3 class="text-xl font-semibold text-blue-900">Hello {{ user.first_name }} {{ user.last_name }}</h3>
 
+    <h2 class="text-2xl font-bold text-green-600 mt-4">Congratulations! Your Loan Request Has Been Approved 🎉</h2>
 
-<h2>Congratualtions ! your Loan Request has been approved</h2>
-<p>After loan approval  your toal amount is {{user.account.balance}}</p>
+    <p class="text-gray-700 mt-2">
+        After loan approval, your total account balance is <strong class="text-blue-900">{{ user.account.balance }}</strong>.
+    </p>
 
-<p>Thanks for banking with us</p>
-
-<p>Swis Bank</p>
+    <p class="text-gray-600 mt-4">Thank you for banking with us.</p>
+    <p class="font-semibold text-blue-900">Swis Bank</p>
+</div>

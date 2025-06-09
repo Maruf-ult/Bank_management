@@ -1,7 +1,11 @@
-<h3>Hello {{user.first_name}} {{user.last_name}}</h3>
+<div class="bg-white p-6 rounded-lg shadow-md text-center">
+    <h3 class="text-xl font-semibold text-blue-900">Hello {{ user.first_name }} {{ user.last_name }}</h3>
 
-<p>Your Deposite request for ${{amount}} has been successfully completed.After deposite your total amount is {{user.account.balance}}</p>
+    <p class="text-gray-700 mt-4">
+        Your deposit request for <strong class="text-blue-900">${{ amount }}</strong> has been successfully completed.
+        After the deposit, your total account balance is <strong class="text-blue-900">${{ user.account.balance }}</strong>.
+    </p>
 
-<p>Thanks for banking with us</p>
-
-<p>Swis Bank</p>
+    <p class="text-gray-600 mt-4">Thank you for banking with us.</p>
+    <p class="font-semibold text-blue-900">Swis Bank</p>
+</div>

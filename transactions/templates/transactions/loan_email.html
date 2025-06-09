@@ -1,7 +1,11 @@
-<h3>Hello {{user.first_name}} {{user.last_name}}</h3>
+<div class="bg-white p-6 rounded-lg shadow-md text-center">
+    <h3 class="text-xl font-semibold text-blue-900">Hello {{ user.first_name }} {{ user.last_name }}</h3>
 
-<p>Your Loan request for ${{amount}} has been successfully send to admin.Wait for admin approval after getting admin approval you will get the loan and also get a confirmation mail</p>
+    <p class="text-gray-700 mt-4">
+        Your loan request for <strong class="text-blue-900">${{ amount }}</strong> has been successfully sent to the admin.
+        Please wait for approval. Once the admin approves your loan, you will receive the funds along with a confirmation email.
+    </p>
 
-<p>Thanks for banking with us</p>
-
-<p>Swis Bank</p>
+    <p class="text-gray-600 mt-4">Thank you for banking with us.</p>
+    <p class="font-semibold text-blue-900">Swis Bank</p>
+</div>
