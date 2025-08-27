@@ -98,13 +98,10 @@ WSGI_APPLICATION = 'bank_management.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgresql://swis_bank_user:L2RSXt4qBRnfBjlLrDFgPerpTWPpzNoX@dpg-d0stb495pdvs7392jso0-a.singapore-postgres.render.com/swis_bank',
+        default='postgresql://swis_bank_user:L2RSXt4qBRnfBjlLrDFgPerpTWPpzNoX@dpg-d0stb495pdvs7392jso0-a.singapore-postgres.render.com:5432/swis_bank?sslmode=require',
         conn_max_age=600
     )
 }
-
-
 
 
 
