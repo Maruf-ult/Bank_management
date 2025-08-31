@@ -30,7 +30,7 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://bank-management-1-20sh.onrender.com",
+    "https://bank-management-2k8g.onrender.com",
     "http://127.0.0.1:8000",
     "http://localhost:8000",
 ]
