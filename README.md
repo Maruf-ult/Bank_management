@@ -4,7 +4,7 @@
 ## 📌 Description  
 **Bank Management System** is a Django-based web application designed for **secure and streamlined financial operations**. Users can authenticate, deposit funds, withdraw money, and request loans. Admins oversee and process loan approvals, ensuring reliable decision-making. With **cookie-based sessions**, user profile management, and **Gmail-powered email notifications**, the system prioritizes transparency, privacy, and real-time communication.
 ## Live Link
-## https://bank-management-1-20sh.onrender.com
+## https://bank-management-4-fsu6.onrender.com
 
 ## ✨ Features  
 - 💰 Deposit and withdraw funds securely  
